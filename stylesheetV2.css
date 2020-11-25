@@ -517,6 +517,15 @@ button[type=submit]:hover
         margin-top: 110px;
     }
     
+    .contact_div h2{
+        margin-top: 0;
+    }
+    
+    .contact-picture{
+        margin-top: -50px;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 980px)
@@ -533,6 +542,22 @@ button[type=submit]:hover
     header{
         padding-bottom: 0px;
     }
+    .contact_div h2{
+        margin-top: 0;
+    }
+    
+    .contact-picture{
+        margin-top: -50px;
+    }
+    
+    .contact_div h2{
+        margin-top: 0;
+    }
+    
+    .contact-picture{
+        margin-top: -50px;
+    }
+    
     
 }
 
@@ -546,7 +571,7 @@ button[type=submit]:hover
         height: 40px;
         background: url(images/menu-alt-512.png) no-repeat 98% center;
         background-size: 30px;
-        background-color: rebeccapurple;
+        background-color: #6F2901;
         cursor: pointer;
         z-index: 3;
     }
@@ -557,7 +582,7 @@ button[type=submit]:hover
         height: 40px;
         background: url(images/menu_open.png) no-repeat 98% center;
         background-size: 30px;
-        background-color: rebeccapurple;
+        background-color: #6F2901;
         cursor: pointer;
     }
     
@@ -613,7 +638,7 @@ button[type=submit]:hover
 }
 
 .navbar2 li.active a {
-    background-color: mediumpurple;
+    background-color: darkgreen;
 }
     
     footer.open{
@@ -718,12 +743,24 @@ button[type=submit]:hover
         margin-top: 20px;
     }
     
+    .contact_div h2{
+        margin-top: 0;
+    }
+    
+    .contact-picture{
+        margin-top: -50px;
+    }
+    
     .contact_div.open{
         margin-top: 250px;
     }
     
     .bio p{
         margin: 0;
+    }
+    
+    #aboutbody.open{
+        margin-top: 250px;
     }
 }
 
