@@ -250,7 +250,15 @@ body {
   width: 25px;
 }
 
-.card.onhover{
+.card{
+  transition: 1s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+/* .card.onhover{
   animation: spincard 0.5s;
 }
 
@@ -266,7 +274,7 @@ body {
   to{
       transform: rotateY(0);
   }
-}
+} */
 
 @media (max-width: 500px) {
   .card-container {
