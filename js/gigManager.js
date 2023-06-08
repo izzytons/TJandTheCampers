@@ -1,6 +1,6 @@
-// Get DR Gigs
+// Get TJ Gigs
 export async function GetGigs(){
-    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/dynamiterhythm/", {
+    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json; charset=UTF-8",
@@ -18,7 +18,7 @@ export async function GetGigs(){
 }
 
 export async function CreateGig(newGig){
-    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/dynamiterhythm/", {
+    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json; charset=UTF-8",
@@ -43,7 +43,7 @@ export async function CreateGig(newGig){
 }
 
 export async function UpdateGig(gigId, updatedGig){
-    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/dynamiterhythm/${gigId}`, {
+    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/${gigId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
@@ -68,7 +68,7 @@ export async function UpdateGig(gigId, updatedGig){
 }
 
 export async function DeleteGig(gigId){
-    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/dynamiterhythm/${gigId}`, {
+    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/${gigId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
