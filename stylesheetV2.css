@@ -258,24 +258,6 @@ body {
   transform: scale(1.05);
 }
 
-/* .card.onhover{
-  animation: spincard 0.5s;
-}
-
-.card.animationcomplete{
-  animation: none;
-}
-
-@keyframes spincard{
-  from{
-      transform: rotateY(90deg);
-  }
-
-  to{
-      transform: rotateY(0);
-  }
-} */
-
 @media (max-width: 500px) {
   .card-container {
     width: 100%;
