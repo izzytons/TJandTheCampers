@@ -555,3 +555,41 @@ pointer-events: all;
 }
 
 
+/* mobile styling */
+@media only screen and (max-width: 860px)
+{  
+  .event_container{
+        margin: 50px auto;
+        min-height: calc(100% - 160px);
+    }
+    
+    .event_container.open{
+        margin-top: 340px;
+    }
+    
+    .event{
+        flex-direction: column;
+    }
+    
+    .event .event_left {
+        padding: 0;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .event .event_left .event_date .event_day,
+    .event .event_left .event_data .event_month{
+        display: inline-block;
+        font-size: 24px;
+    }
+    
+    .event .event_left .event_date{
+        padding: 10px 0;
+    }
+
+    .event_right{
+        max-width: 70vw;
+    } 
+}
+
+
+
