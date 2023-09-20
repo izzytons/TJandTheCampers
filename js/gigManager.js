@@ -1,5 +1,5 @@
 // CRUD for TJ Gigs
-let baseURL = 'https://gig-api.netlify.app/.netlify/functions/api/gigs/test';
+let baseURL = 'https://gig-api.netlify.app/.netlify/functions/api/gigs';
 
 export async function GetGigs(){
     const response = await fetch(`${baseURL}/tjandthecampers/`, {
