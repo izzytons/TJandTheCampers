@@ -416,7 +416,7 @@ body {
 .modification-buttons{
   display: flex;
   flex-direction: row; 
-  margin-top: -40px;
+  margin-top: -20px;
   padding-bottom: 40px;  
 }
 
@@ -426,6 +426,18 @@ body {
 
 #deletegig-button{
   background-color: red;
+}
+
+button{
+  display: block;
+  width: 100%;
+  background: gray;
+  padding: .5rem;
+  color: white;
+  font-size: 15px;
+  margin-top: 1rem;
+  cursor:pointer;
+  border-radius: 5px;
 }
 
 /*Update Gig Modal*/
