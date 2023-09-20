@@ -1,6 +1,6 @@
 <html>
     <head>
-    <title>TJ &amp; the Campers - Contact Us</title> 
+    <title>TJ &amp; the Campers - Calendar</title> 
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="shortcut icon" href="images/TJ_Logo.jpg">
     <link rel="stylesheet" type ="text/css" href="stylesheetV2.css"/>
@@ -13,9 +13,14 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-   
-<body>
-    <header role="banner">
+
+<script src="./js/preloader.js" defer></script>
+<body class="editcalendar">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
+     <script type="module" src="./js/upcomingshows.js"></script>
+
+     <header role="banner">
         <img id="logo-main" src="images/TJLogo_transparent.png" width="18%" alt="Main Logo">
       <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -35,44 +40,41 @@
               <li><a href="./about.html">Meet the Band</a></li>
               <li><a href="./upcomingshows.html">Calendar</a></li>
               <li><a href="./media.html">Media</a></li>
-              <li class="active"><a href="./contactus.html">Contact Us</a></li>
+              <li><a href="./contactus.html">Contact Us</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div>
         </div><!-- /.container-fluid -->
       </nav>
       </header><!-- header role="banner" -->
-
-      <div id="bodycontent">
-        <!-- Formspree Form -->
-        <div class="container">
-          <div class="formcontainer">
-        <form
-  action="https://formspree.io/f/mqkgderv"
-  method="POST" autocomplete="off">
-  <h1>Send us a message</h1>
-  <div class="form-group">
-  <label>
-    Name
-    <input type="text" name="name" class="form-control">
-  </label>
-</div>
-<div class="form-group">
-  <label>
-    Email
-    <input type="email" name="email" class="form-control">
-  </label>
-</div>
-  <div class="form-group">
-  <label>
-    Message
-    <textarea name="message" class="form-control"></textarea>
-  </label>
-</div>
-  <button type="submit" class="btn btn-default">Send</button>
-</form>
-      </div>
-    </div>
-    </div>
-</body>
+     
+     <body>
+     <div class = "event_container" id = "event_container"> 
+         <!--Will be populated dynamically via script above-->
+     </div>
+ 
+     <!-- Edit Gig Modal -->
+     <div class="editmodal" id="update-gig-modal">
+         <div class="editmodal-header">
+           <div class="title">Edit Gig</div>
+           <button data-close-button class="close-button" id="close-button">&times;</button>
+         </div>
+         <div class="editmodal-body">
+             <form id="updategig-form">
+                 <label for: GigTitle>Gig Title:</label>
+                 <input type="text" id="GigTitle" name="GigTitle"><br>
+                 <label for: GigDescription>Description:</label>
+                 <textarea id="GigDescription" name="GigDescription"></textarea><br>
+                 <label for: GigLocation>Location/Address:</label>
+                 <textarea id="GigLocation" name="GigLocation"></textarea><br>
+                 <label for: GigDateAndTime>Date and Time:</label>
+                 <input type="datetime-local" id="GigDateAndTime" name="GigDateAndTime"><br>
+                 <button type="submit" id="updategig-submit-button">Update</button>
+             </form>
+         </div>
+       </div>
+       <div id="overlay"></div>    
+ 
+     </body>
+     </body>
 </html>
