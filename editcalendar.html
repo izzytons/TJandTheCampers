@@ -16,6 +16,8 @@
 
 <script src="./js/preloader.js" defer></script>
 <body class="editcalendar">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
      <script type="module" src="./js/upcomingshows.js"></script>
      
      <body>
@@ -24,12 +26,12 @@
      </div>
  
      <!-- Edit Gig Modal -->
-     <div class="modal" id="update-gig-modal">
-         <div class="modal-header">
+     <div class="editmodal" id="update-gig-modal">
+         <div class="editmodal-header">
            <div class="title">Edit Gig</div>
            <button data-close-button class="close-button" id="close-button">&times;</button>
          </div>
-         <div class="modal-body">
+         <div class="editmodal-body">
              <form id="updategig-form">
                  <label for: GigTitle>Gig Title:</label>
                  <input type="text" id="GigTitle" name="GigTitle"><br>

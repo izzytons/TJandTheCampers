@@ -416,8 +416,10 @@ body {
 .modification-buttons{
   display: flex;
   flex-direction: row; 
-  margin-top: -20px;
+  margin-top: -20px !important;
   padding-bottom: 40px;  
+  width: 80%;
+  margin: auto;
 }
 
 .modification-buttons button{
@@ -440,11 +442,16 @@ button{
   border-radius: 5px;
 }
 
+button:hover{
+  color: black;
+}
+
 /*Update Gig Modal*/
-.modal {
-position: fixed;
-top: 50%;
-left: 50%;
+.editmodal {
+position: fixed !important;
+display: unset !important;
+top: 50% !important;
+left: 50% !important;
 transform: translate(-50%, -50%) scale(0);
 transition: 200ms ease-in-out;
 border: 1px solid black;
@@ -455,11 +462,11 @@ width: 800px;
 max-width: 80%;
 }
 
-.modal.active {
+.editmodal.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-header {
+.editmodal-header {
 padding: 10px 15px;
 display: flex;
 justify-content: space-between;
@@ -467,12 +474,12 @@ align-items: center;
 border-bottom: 1px solid black;
 }
 
-.modal-header .title {
-  font-size: 1.25rem;
+.editmodal-header .title {
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.modal-header .close-button {
+.editmodal-header .close-button {
 cursor: pointer;
 border: none;
 outline: none;
@@ -485,8 +492,18 @@ height: fit-content;
 margin-top: 0;
 }
 
-.modal-body {
+.editmodal-body {
   padding: 10px 15px;
+}
+
+input, textarea{
+  display: block;
+  width: 100%;
+  font-family: sans-serif;
+  border: 1px solid black;
+  padding: .5rem;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 #overlay {
