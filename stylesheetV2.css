@@ -312,7 +312,7 @@ body {
 .event_container{
   max-width: 800px;
   min-height: calc(100% - 360px);
-  margin: 150px auto;
+  margin: 50px auto;
 }
 
 .event_container h3.year{
