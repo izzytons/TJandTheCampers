@@ -1,6 +1,8 @@
-// Get TJ Gigs
+// CRUD for TJ Gigs
+let baseURL = 'https://gig-api.netlify.app/.netlify/functions/api/gigs/test';
+
 export async function GetGigs(){
-    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/", {
+    const response = await fetch(`${baseURL}/tjandthecampers/`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json; charset=UTF-8",
@@ -18,7 +20,7 @@ export async function GetGigs(){
 }
 
 export async function CreateGig(newGig){
-    const response = await fetch("https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/", {
+    const response = await fetch(`${baseURL}/tjandthecampers/`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json; charset=UTF-8",
@@ -43,7 +45,7 @@ export async function CreateGig(newGig){
 }
 
 export async function UpdateGig(gigId, updatedGig){
-    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/${gigId}`, {
+    const response = await fetch(`${baseURL}/tjandthecampers/${gigId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
@@ -68,7 +70,7 @@ export async function UpdateGig(gigId, updatedGig){
 }
 
 export async function DeleteGig(gigId){
-    const response = await fetch(`https://gig-api.netlify.app/.netlify/functions/api/gigs/tjandthecampers/${gigId}`, {
+    const response = await fetch(`${baseURL}/tjandthecampers/${gigId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
