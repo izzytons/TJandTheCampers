@@ -42,6 +42,10 @@ body {
     font-size: 1.75rem;      
   }
 
+  .navbar-header button{
+    width: auto;
+  }
+
   header{
     background-color: black;
     margin: 10px auto;
