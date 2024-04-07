@@ -23,17 +23,21 @@ const modal = document.getElementById("update-gig-modal");
 const closeButton = document.getElementById("close-button");
 const eventContainer = document.getElementById("event_container");
 
+var customLoadedEvent = new CustomEvent("AllPageContentLoaded");
+
 // OnLoad Event
 window.onload = async () => {
     if (document.body.classList.contains("upcomingshows")){
-        PopulateCalendarPage();
+        await PopulateCalendarPage();
     }
     else if (document.body.classList.contains("editcalendar")){
-        PopulateEditCalendarPage();
+        await PopulateEditCalendarPage();
         closeButton.addEventListener("click", () => CloseModal());
         console.log(`current date: ${currentDate.toLocaleString('en-us')}`);
         document.getElementById('GigDateAndTime').value = dateHelper.formatDate(new Date());
-}
+    }
+
+window.dispatchEvent(customLoadedEvent);
 
 // Create single calendar html object for a gig object
 function CreateCalendarObject(gig){
